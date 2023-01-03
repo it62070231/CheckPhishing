@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "Check Phishing Website",
+    "version": "0.1.0",
+    "description": "Predict Website is Legitmate or Phishing",
+    "action": {
+        "default_icon": {             
+            "16": "image/image.png",  
+            "24": "image/image.png",  
+            "32": "image/image.png"   
+        },
+        "default_title": "Check Phishing",
+        "default_popup": "home.html"
+    },
+    "icons": {
+        "16": "image/image.png",
+        "32": "image/image.png",
+        "48": "image/image.png",
+        "128": "image/image.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "exclude_matches": ["https://www.youtube.com/*"],
+            "js": ["./bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js", "content-scripts.js"],
+            "css": ["./bootstrap-5.0.2/dist/css/bootstrap.min.css", "style-extension.css"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+       ]
+}
