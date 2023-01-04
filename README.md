@@ -1,2 +1,11 @@
 # CheckPhishing
-Check Phishing with ml in Google Extension App 
+CheckPhishing เป็นส่วนหนึ่งของรายวิชา Senior Project ของสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+
+โดยมีผู้จัดทำ ดังนี้
+
+1. นาย กิตติธัช ศรีฉัตรสุวรรณ
+2. นาย จิรายุ จุลกทัพพะ
+
+CheckPhishing เป็น Chrome Extension ที่ถูกสร้างขึ้นเพื่อตรวจจับเว็บไซต์ฉ้อโกง เพื่อให้ผู้ใช้สามารถท่องเว็บไซต์ได้อย่างปลอดภัย โดยโปรแกรมจะทำงานผ่าน API ที่สร้างโดย FastAPI ที่ทำงานบน Cloud ซึ่งเราได้เลือกใช้ AWS Lambda เป็นเครื่องบน Cloud เพื่อใช้ในการรันฟังก์ชั่น และใช้ AWS S3 เป็นแหล่งเก็บข้อมูลของเรา
+
+CheckPhishing ได้ถูกสร้างขึ้นมาจากการฝึกฝนโมเดล Machine Learning เพื่อทำการหาเว็บไซต์ฉ้อโกง โดยทางผู้จัดทำได้ทำการทดลองทั้งหมด 7 โมเดลด้วยกัน ได้แก่ Logistic Regression, K- Nearest Neighbor, Support Vector Machine, Decision Tree, Random Forest, AdaBoost และ XGBoost โดยโมเดลที่ดีที่สุดที่ได้จากการทดลองคือ XGBoost ซึ่งมีผลลัพธ์ในการตรวจจับเว็บไซต์ฉ้อโกงถึง 96% 
